@@ -62,6 +62,17 @@ export default App;
 
 ```
 
+## Resumo
+
+- O `JSX` é como um HTML, Porém dentro do código JavaScript.
+- É a principal maneira de escrever HMTL com o React.
+- Podemos`interpolar variáveis`, inserindo ela entre `{}`.
+- É possivel também `executar funções` em `JSX`.
+- Inserir `valores em atributos de tags` também é válido em `JSX`.
+
+
+
+
 # [Aula 4: Criando componentes no React](https://www.youtube.com/watch?v=-wrsG0IGc-M&list=PLnDvRpP8BneyVA0SZ2okm-QBojomniQVO&index=4&pp=iAQB)
 
 
