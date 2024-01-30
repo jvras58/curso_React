@@ -12,7 +12,11 @@ As anotações detalhadas das aulas estão disponíveis no arquivo [`anotacoes.m
 
 No diretório do projeto, você pode executar os seguintes scripts:
 
-### `npm start`
+### `npm install` ou `npm i` 
+
+Este comando instala as dependencias do projeto. 
+
+### `npm start` 
 
 Este comando executa o aplicativo no modo de desenvolvimento. Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo no seu navegador.
 
