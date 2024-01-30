@@ -1111,11 +1111,85 @@ export default App;
 - No exemplo acima, o estado `nome` é compartilhado entre os componentes `SeuNome` e `Saudacao` através do componente pai `App`.
 - Isso permite que `SeuNome` atualize `nome` e `Saudacao` leia `nome`, mesmo que eles sejam componentes irmãos.
 
+
 # [Aula 15: React Router](https://youtu.be/eJ8W3l371Jg?list=PLnDvRpP8BneyVA0SZ2okm-QBojomniQVO)
 
+O `React Router` é um pacote que permite a mudança de URLs da aplicação, possibilitando o acesso a diferentes views sem a necessidade de recarregar a página. Isso significa que apenas uma parte do layout da aplicação é alterada de view para view. Para utilizar o React Router, é necessário instalar o pacote no projeto e realizar algumas alterações na estrutura do App.
+
+## Instalação
+
+Para instalar o pacote npm react-router-dom, utilize o seguinte comando:
+
+```bash
+npm install react-router-dom
+```
+
+## Utilização
+
+Vamos utilizar uma série de componentes desse pacote. No arquivo `app.js`, importe os componentes necessários:
+
+```javascript
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+```
+
+Em seguida, envolva todo o JSX em `<Router></Router>`. Vamos criar uma barra de navegação simples utilizando a tag `<Link to="/"></Link>`, que é responsável pelo roteamento.
+
+Utilizamos o componente `<Routes>` e envolvemos com a rota: `<Route path='/' element={<Home />} /><Routes />`. A tag `<Routes>` é onde estarão as rotas.
+
+Exemplo de código:
+
+```javascript
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import Home from "./components/pages/Home";
+
+function App() {
+  return (
+    <Router>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+      </ul>
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
+```
+
+Podemos aprimorar ainda mais esse `app.js`:
+
+```javascript
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import Home from "./components/pages/Home";
+import Navbar from "./components/NavBar";
+
+function App() {
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
+```
+
+Com essas alterações, temos uma aplicação que utiliza o React Router para navegação entre diferentes views sem a necessidade de recarregar a página.
+
+# Resumo:
+
 - O `React Router` é um pacote para mudança de URLs da aplicação.
-- Podemos assim acessar outras views, sem a `page reload`.
-- Trocando apenas uma parte do `layout da aplicação`, ou seja, o que muda de view para view.
-- Precisamos instalar este pacote no projeto.
+- Podemos assim acessar outras views, `sem a page reload`.
+- `Trocando apenas uma parte do layout da aplicação`, ou seja, o que muda de view para view.
+- Precisamos `instalar este pacote` no projeto.
 - E também realizar algumas mudanças em como o App é estruturado.
- 
+

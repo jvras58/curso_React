@@ -1,9 +1,9 @@
-function Empresa(){
+function Teste(){
 return(
     <div>
-        <h1>Empresa</h1>
+        <h1>Teste_1</h1>
         <p>Conteúdo da pagina</p>
     </div>
 )
 }
-export default Empresa
+export default Teste
